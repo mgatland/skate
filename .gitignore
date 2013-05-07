@@ -6,3 +6,6 @@
 *.csproj
 *.unityproj
 *.sln
+
+# where I put the builds
+bin/
