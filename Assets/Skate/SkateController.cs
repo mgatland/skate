@@ -13,6 +13,7 @@ public class SkateController : MonoBehaviour {
 	private float fallingAcceleration = 1f;
 	private float jumpVelocity = 0.3f;
 	private float slopeBoostFactor = 0.01f; //amount that going uphill boosts your jump velocity
+	private float maxNaturalSpeed = 250f;
 	
 	private CharacterController controller;
 	
@@ -59,7 +60,10 @@ public class SkateController : MonoBehaviour {
 		
 		float rawThrottle = Input.GetAxisRaw("Vertical");
 		if (rawThrottle > 0) {
-			movementSpeed += acceleration * rawThrottle * Time.deltaTime;
+			if (movementSpeed < maxNaturalSpeed) {
+				float speedIncrease = acceleration * rawThrottle * Time.deltaTime;
+				movementSpeed = Mathf.Min(movementSpeed + speedIncrease, maxNaturalSpeed);
+			}
 		} else {
 			movementSpeed = Mathf.Max(movementSpeed - deceleration * Time.deltaTime, 0);
 		}
