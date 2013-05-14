@@ -1,10 +1,10 @@
 ﻿<Properties>
   <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
-  <MonoDevelop.Ide.Workbench ActiveDocument="Assets\Skate\GridUV.js">
+  <MonoDevelop.Ide.Workbench ActiveDocument="Assets\Skate\story\Score.cs">
     <Files>
-      <File FileName="Assets\Skate\GridUV.js" Line="23" Column="1" />
-      <File FileName="Assets\Skate\SkateController.cs" Line="63" Column="17" />
-      <File FileName="Assets\Skate\Level.cs" Line="10" Column="57" />
+      <File FileName="Assets\Skate\story\Score.cs" Line="44" Column="1" />
+      <File FileName="Assets\Skate\story\funbox.cs" Line="38" Column="15" />
+      <File FileName="Assets\Skate\SkateController.cs" Line="1" Column="1" />
     </Files>
   </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.DebuggingService.Breakpoints>

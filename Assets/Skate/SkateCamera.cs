@@ -9,6 +9,7 @@ public class SkateCamera : MonoBehaviour {
 	//settings
 	private float cameraOffsetX = -6;
 	private float cameraOffsetZ = 2;
+	private Vector3 viewOffset = new Vector3(0f, 1f, 0f);
 	
 	// Use this for initialization
 	void Start () {
@@ -21,6 +22,6 @@ public class SkateCamera : MonoBehaviour {
 		Vector3 cameraPosition = target.position + target.forward * cameraOffsetX + target.up * cameraOffsetZ;
 		cameraTransform.position = cameraPosition;
 		
-		cameraTransform.LookAt(target);
+		cameraTransform.LookAt(target.position + viewOffset);
 	}
 }
